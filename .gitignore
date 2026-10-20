@@ -1,16 +1,3 @@
-# Maven
-target/
-
-# IntelliJ IDEA
-.idea/
-*.iml
-
-# Compiled Java files
-*.class
-
-# Logs
-*.log
-
-# OS files
+/.idea/
+/target/
 .DS_Store
-Thumbs.db
