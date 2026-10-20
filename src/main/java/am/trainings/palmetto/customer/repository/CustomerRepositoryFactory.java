@@ -12,7 +12,10 @@ public class CustomerRepositoryFactory extends AbstractRepositoryFactory {
     private static final Map<RepositoryTypes, CustomerRepository> CUSTOMER_REPOSITORY_MAP = new HashMap<>();
 
     static {
-        CUSTOMER_REPOSITORY_MAP.put(RepositoryTypes.IN_MEMORY, InMemoryCustomerRepository.getInstance());
+        CUSTOMER_REPOSITORY_MAP.put(RepositoryTypes.IN_MEMORY,
+                InMemoryCustomerRepository.getInstance());
+        CUSTOMER_REPOSITORY_MAP.put(RepositoryTypes.FILE_REPOSITORY,
+                CustomerFileRepository.getInstance());
     }
 
     public CustomerRepository getRepositoryByType(RepositoryTypes type) {

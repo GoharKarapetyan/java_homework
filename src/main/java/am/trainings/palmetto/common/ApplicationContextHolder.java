@@ -10,7 +10,8 @@ import java.util.NoSuchElementException;
 
 public final class ApplicationContextHolder {
 
-    private final RepositoryTypes repositoryType = RepositoryTypes.IN_MEMORY;
+//    private final RepositoryTypes repositoryType = RepositoryTypes.IN_MEMORY;
+    private final RepositoryTypes repositoryType = RepositoryTypes.FILE_REPOSITORY;
 
     private static final Map<Class<?>, Object> CONTEXT = Map.of(
             CustomerRepository.class, new CustomerRepositoryFactory(),
